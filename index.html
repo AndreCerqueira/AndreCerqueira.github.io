@@ -1,749 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Portfolio" />
-        <meta name="author" content="André Cerqueira" />
-        <title>André Cerqueira</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <div id="portfolio"></div>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">My Portfolio</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"><i class="fas fa-home fa-2x"></i></a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#games"><i class="fas fa-gamepad fa-2x"></i></a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"><i class="fas fa-user fa-2x"></i></a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#certificates"><i class="fas fa-award fa-2x"></i></a></li>
-                    </ul>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio" />
+    <meta name="author" content="André Cerqueira" />
+    <title>André Cerqueira</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <div id="portfolio"></div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">My Portfolio</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio"><i
+                                class="fas fa-home fa-2x"></i></a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#games"><i
+                                class="fas fa-gamepad fa-2x"></i></a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about"><i
+                                class="fas fa-user fa-2x"></i></a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="#certificates"><i class="fas fa-award fa-2x"></i></a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/images/foto.png" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">André Cerqueira</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Programmer - Game Developer - Software Developer</p>
-            </div>
-        </header>
-
-
-        <!---------------------------------------------------- Game Projects ---------------------------------------------->
-
-        <section class="page-section portfolio" id="games">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Game Projects</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/tales2d.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/tales3d.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/manlyPunch.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/jumpYeah.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/pulinho.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/susCitites.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal7">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/cubito.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal8">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/zigzag.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal9">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/egypt.png" alt="..." />                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!---------------------------------------------------- Other projects ---------------------------------------------->
-
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Other Projects</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/scoutsBag.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/socialNet.png" alt="..." />                        </div>
-                    </div>
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/images/processing.png" alt="..." />                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-user"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto">
-                        <p class="lead">Creative and Dedicated Programmer, with a history of projects developed in school context with excellent ratings.</p></div>
-                    <div class="col-lg-4 me-auto">
-                        <p class="lead">With four years of experience developing with the Unity game engine. I have accumulated experience in the development of 2D and 3D games for computer and mobile.
-                            </p></div>
-                    <div class="col-lg-4 ms-auto">
-                        <p class="lead">I also have experience with several programming languages and with Android Studio. MySQL, NoSQL, UML Diagrams, Web Development, Backend and Frontend </p></div>
-                </div>
-                <!-- About Section Button-->
-                <div class="text-center mt-4">
-
-                    <a class="btn btn-xl btn-outline-light" href="assets/files/AndreCerqueiraCV.pdf" download  target="_blank">
-                        <i class="fas fa-download me-2"></i>
-                        Curriculum
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-            <!---------------------------------------------------- Certificados ---------------------------------------------->
-
-            <section class="page-section portfolio" id="certificates">
-                <div class="container">
-                    <!-- Portfolio Section Heading-->
-                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ceterficates</h2>
-                    <!-- Icon Divider-->
-                    <div class="divider-custom">
-                        <div class="divider-custom-line"></div>
-                        <div class="divider-custom-icon"><i class="fas fa-award"></i></div>
-                        <div class="divider-custom-line"></div>
-                    </div>
-                    <!-- Portfolio Grid Items-->
-                    <div class="row justify-content-center">
-                        <!-- Portfolio Item 1-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal1">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/erasmus_irland.jpeg" alt="..." />
-                            </div>
-                        </div>
-                        <!-- Portfolio Item 2-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal2">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/erasmus_repairIT.jpeg" alt="..." />                        </div>
-                        </div>
-                        <!-- Portfolio Item 3-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal3">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/seminario_erasmus.jpeg" alt="..." />                        </div>
-                        </div>
-                        
-                        <!-- Portfolio Item 1-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal4">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/diploma_merito_1.jpeg" alt="..." />
-                            </div>
-                        </div>
-                        <!-- Portfolio Item 2-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal5">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/diploma_merito_2.jpeg" alt="..." />                        </div>
-                        </div>
-                        <!-- Portfolio Item 3-->
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal6">
-                                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/images/certificates/udemyUnity.jpg" alt="..." />                        </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        <!-- Footer-->
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            Braga, Portugal
-                        </p>
-                    </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/andre.crosta/"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/AndreCerqueira"><i class="fab fa-fw fa-github"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/andré-cerqueira-01a239160/"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">Contact me</h4>
-                        <p class="lead mb-0">
-                            andrecerq16@gmail.com <br>
-                            a20115@alunos.ipca.pt
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; André Cerqueira 2021</small></div>
         </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="assets/images/foto.png" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">André Cerqueira</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">Programmer - Game Developer - Software Developer</p>
+        </div>
+    </header>
+
+
+    <!---------------------------------------------------- Game Projects ---------------------------------------------->
+
+    <section class="page-section portfolio" id="games">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Game Projects</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/tales2d.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/tales3d.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/manlyPunch.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/jumpYeah.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/pulinho.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/susCitites.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal7">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/cubito.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal8">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/zigzag.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal9">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/egypt.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------- Other projects ---------------------------------------------->
+
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Other Projects</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/scoutsBag.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/socialNet.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#otherPortfolioModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/processing.png" alt="..." />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-user"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">Creative and Dedicated Programmer, with a history of projects developed in school
+                        context with excellent ratings.</p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead">With four years of experience developing with the Unity game engine. I have
+                        accumulated experience in the development of 2D and 3D games for computer and mobile.
+                    </p>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead">I also have experience with several programming languages and with Android Studio.
+                        MySQL, NoSQL, UML Diagrams, Web Development, Backend and Frontend </p>
+                </div>
+            </div>
+            <!-- About Section Button-->
+            <div class="text-center mt-4">
+
+                <a class="btn btn-xl btn-outline-light" href="assets/files/AndreCerqueiraCV.pdf" download
+                    target="_blank">
+                    <i class="fas fa-download me-2"></i>
+                    Curriculum
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------------------------------------- Certificados ---------------------------------------------->
+
+    <section class="page-section portfolio" id="certificates">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Ceterficates</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-award"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal1">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/erasmus_irland.jpeg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal2">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/erasmus_repairIT.jpeg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal3">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/seminario_erasmus.jpeg" alt="..." />
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal4">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/diploma_merito_1.jpeg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal5">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/diploma_merito_2.jpeg" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#certificateModal6">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/images/certificates/udemyUnity.jpg" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        Braga, Portugal
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/andre.crosta/"><i
+                            class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/AndreCerqueira"><i
+                            class="fab fa-fw fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1"
+                        href="https://www.linkedin.com/in/andré-cerqueira-01a239160/"><i
+                            class="fab fa-fw fa-linkedin-in"></i></a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Contact me</h4>
+                    <p class="lead mb-0">
+                        andrecerq16@gmail.com <br>
+                        a20115@alunos.ipca.pt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright &copy; André Cerqueira 2021</small></div>
+    </div>
 
 
 
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tales of Leviatel 2D</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tales of Leviatel
+                                    2D</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/tales2d/pic1.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WQ0hddoqOFI" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/WQ0hddoqOFI"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong> A 2D adventure game where you have to kill monsters and do missions to explore the map. <br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, as final project of the 12th grade. <br>
-                                                    The programming was done by me and the design by André Sampaio. <br> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong> A
+                                    2D adventure game where you have to kill monsters and do missions to explore the
+                                    map. <br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, as final project of the 12th grade. <br>
+                                    The programming was done by me and the design by André Sampaio. <br> </p>
 
-                                    <a href="https://andrecerqueira.itch.io/tales-of-leviatel-2d" target="_blank">
+                                <a href="https://andrecerqueira.itch.io/tales-of-leviatel-2d" target="_blank">
                                     <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
                                         <i class="fas fa-play me-2"></i>
                                         Play Game
                                     </button>
-                                    </a>
-<!--
+                                </a>
+                                <!--
                                     <a href="https://github.com/AndreCerqueira/TOL_2D" target="_blank">
                                     <button class="btn btn-primary" style="margin-top: 2%; margin-left: 10%;" data-bs-dismiss="modal">
                                         <i class="fab fa-fw fa-github"></i>
                                         View Code
                                     </button>
                                     </a>-->
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tales of Leviatel 3D</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tales of Leviatel
+                                    3D</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/tales3d.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rVcPMLmOA4g" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/rVcPMLmOA4g"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A 3D adventure game where you have to kill all the 4 bosses around the map.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, as final project of the high school (PAP). <br>
-                                                    The programming was done by me and the design by Nuno Fernandes. <br> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    3D adventure game where you have to kill all the 4 bosses around the map.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, as final project of the high school (PAP). <br>
+                                    The programming was done by me and the design by Nuno Fernandes. <br> </p>
 
-                                    <a href="https://www.dropbox.com/s/rb673wzmnt8kokf/Tales%20of%20Leviatel.zip?dl=0" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <a href="https://www.dropbox.com/s/rb673wzmnt8kokf/Tales%20of%20Leviatel.zip?dl=0"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Manly Punch</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Manly Punch</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/manlyPunch.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/31jmMo91TZs" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/31jmMo91TZs"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A boxing fighting game where you play with known characters in pixel art style.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made to learn and try new things. <br>
-                                                    The programming was done by me and the design by André Sampaio. <br> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    boxing fighting game where you play with known characters in pixel art style.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made to learn and try new things. <br>
+                                    The programming was done by me and the design by André Sampaio. <br> </p>
 
-                                    <a href="https://andrecerqueira.itch.io/manly-punch" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <a href="https://andrecerqueira.itch.io/manly-punch" target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Jump Yeah</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Jump Yeah</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/keZ1llnRtZ0" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>Mobile game where the player need to climb as much as possible to get better scores.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made to advertise the mobile applications course. <br>
-                                                    The programming and design was done by me, Nuno Fernandes and Vitor Silva. <br> </p>
-
-                                    <a href="https://play.google.com/store/apps/details?id=com.ipca.game.JumpYeah" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
-
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/keZ1llnRtZ0"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept:
+                                    </strong>Mobile game where the player need to climb as much as possible to get
+                                    better scores.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made to advertise the mobile applications
+                                    course. <br>
+                                    The programming and design was done by me, Nuno Fernandes and Vitor Silva. <br> </p>
+
+                                <a href="https://play.google.com/store/apps/details?id=com.ipca.game.JumpYeah"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Roll Away</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Roll Away</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/pulinho.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbu1nX6TSx4" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbu1nX6TSx4"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A simple game where the player has to explore a map with several levels, npcs and missions.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made to learn and try new things. <br>
-                                        The programming and UI design was done by me and the 3D models by André Sampaio. <br></p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    simple game where the player has to explore a map with several levels, npcs and
+                                    missions.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made to learn and try new things. <br>
+                                    The programming and UI design was done by me and the 3D models by André Sampaio.
+                                    <br></p>
 
-                                    <a href="https://andrecerqueira.itch.io/rollaway?secret=vgCx6g7kDYKXAgetPNqhZVc2VM" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <a href="https://andrecerqueira.itch.io/rollaway?secret=vgCx6g7kDYKXAgetPNqhZVc2VM"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">EnvironMental</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">EnvironMental</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/susCitites.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MM0PtUZp7HE" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/MM0PtUZp7HE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>Mobile game where the player need to build and get resources to make a Sustainable Cities.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made under the run-eu games changing games programm.
-                                        The game was made by the Cereals First team. <br> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept:
+                                    </strong>Mobile game where the player need to build and get resources to make a
+                                    Sustainable Cities.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made under the run-eu games changing games
+                                    programm.
+                                    The game was made by the Cereals First team. <br> </p>
 
-                                    <a href="https://andrecerqueira.itch.io/environmental?secret=SVzVvQLSHUUqBJ8iLRP86gZQwLc" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <a href="https://andrecerqueira.itch.io/environmental?secret=SVzVvQLSHUUqBJ8iLRP86gZQwLc"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 7-->
-        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal7" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 7-->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal7"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cubito</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cubito</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/cubito.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h0_P1ongFkU" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/h0_P1ongFkU"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A simple and difficult game where the player has to dodge obstacles and complete all levels.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made to learn and try new things. <br>> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    simple and difficult game where the player has to dodge obstacles and complete all
+                                    levels.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made to learn and try new things. <br>> </p>
 
-                                    <a href="https://andrecerqueira.itch.io/cubito?secret=p1zv2Mneg8FxdyBNpie7ftrBfRQ" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <a href="https://andrecerqueira.itch.io/cubito?secret=p1zv2Mneg8FxdyBNpie7ftrBfRQ"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Portfolio Modal 8-->
-        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" aria-labelledby="portfolioModal8" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 8-->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" aria-labelledby="portfolioModal8"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Zig Zag</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Zig Zag</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/zigzag.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cRJYcqLYEBI" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A simple game where the player has to follow the path and collect coins.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in unity, it was made to learn and try new things. <br></p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/cRJYcqLYEBI"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <a href="https://andrecerqueira.itch.io/zigzag?secret=My1rx3g8iPCDODCOxsgsCbXNcFU" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fas fa-play me-2"></i>
-                                            Play Game
-                                        </button>
-                                    </a>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    simple game where the player has to follow the path and collect coins.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in unity, it was made to learn and try new things. <br></p>
 
-                                </div>
+                                <a href="https://andrecerqueira.itch.io/zigzag?secret=My1rx3g8iPCDODCOxsgsCbXNcFU"
+                                    target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fas fa-play me-2"></i>
+                                        Play Game
+                                    </button>
+                                </a>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Portfolio Modal 9-->
-        <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" aria-labelledby="portfolioModal9" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Portfolio Modal 9-->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" aria-labelledby="portfolioModal9"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Lost Heritage</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Lost Heritage</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/egypt.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7ffCLVjsX1E" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    
-
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A game about Cultural Heritage The objective is to enter in different maps and collect all the artifacts.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made in Unity, for the Cultural Heritage Game Jam.
-                                        The game was done by me, Fábio Silva, Camila Coelho, André Castro & Albano.<br> </p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7ffCLVjsX1E"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
 
-                                    <!-- Portfolio Modal - Text
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    game about Cultural Heritage The objective is to enter in different maps and collect
+                                    all the artifacts.<br>
+                                    <strong>Context: </strong>
+                                    This game was made in Unity, for the Cultural Heritage Game Jam.
+                                    The game was done by me, Fábio Silva, Camila Coelho, André Castro & Albano.<br> </p>
+
+
+                                <!-- Portfolio Modal - Text
                                     <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong><br>
                                         <strong>Context: </strong> 
                                             <br>
@@ -756,346 +886,388 @@
                                         </button>
                                     </a>-->
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Other Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="otherPortfolioModal1" tabindex="-1" aria-labelledby="otherPortfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="otherPortfolioModal1" tabindex="-1"
+        aria-labelledby="otherPortfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Scouts Bag</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Scouts Bag</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/scoutsBag.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nXa2dWbTkyk" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/nXa2dWbTkyk"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>Mobile app that helps the management of a Scouts Group.<br>
-                                        <strong>Context: </strong> 
-                                        This app was made in Android Studio, as final project of the 1st semester of Mobile Applications.
-                                        The app was done by me, Vitor Silva, Gabriel Fernandes and Pedro Gomes.<br> </p>
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept:
+                                    </strong>Mobile app that helps the management of a Scouts Group.<br>
+                                    <strong>Context: </strong>
+                                    This app was made in Android Studio, as final project of the 1st semester of Mobile
+                                    Applications.
+                                    The app was done by me, Vitor Silva, Gabriel Fernandes and Pedro Gomes.<br> </p>
 
-                                    <a href="https://github.com/Vitoo1408/ScoutsBag" target="_blank">
-                                        <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
-                                            <i class="fab fa-fw fa-github"></i>
-                                            View Code
-                                        </button>
-                                    </a>
+                                <a href="https://github.com/Vitoo1408/ScoutsBag" target="_blank">
+                                    <button class="btn btn-primary" style="margin-top: 2%;" data-bs-dismiss="modal">
+                                        <i class="fab fa-fw fa-github"></i>
+                                        View Code
+                                    </button>
+                                </a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Other Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="otherPortfolioModal2" tabindex="-1" aria-labelledby="otherPortfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="otherPortfolioModal2" tabindex="-1"
+        aria-labelledby="otherPortfolioModal2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Crossed Talks</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Crossed Talks</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image
+                                <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/images/socialNet.png" alt="..." />-->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rx3gBxiz5BQ" title="YouTube video player" frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Rx3gBxiz5BQ"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A Social Network WebSite with Chat and Friend List.<br>
-                                        <strong>Context: </strong> 
-                                        This WebSite was made with HTML / CSS / PHP in school context. 
-                                    </p>
+                                <!-- Portfolio Modal - Text-->
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    Social Network WebSite with Chat and Friend List.<br>
+                                    <strong>Context: </strong>
+                                    This WebSite was made with HTML / CSS / PHP in school context.
+                                </p>
 
-                                    <a href="https://andre2redes.000webhostapp.com/index.html" target="_blank"><button class="btn btn-primary" data-bs-dismiss="modal">
+                                <a href="https://andre2redes.000webhostapp.com/index.html" target="_blank"><button
+                                        class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fab fa-fw fa-chrome"></i>
                                         View Site
                                     </button></a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- Other Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="otherPortfolioModal3" tabindex="-1" aria-labelledby="otherPortfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="otherPortfolioModal3" tabindex="-1"
+        aria-labelledby="otherPortfolioModal3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Catch them all</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Catch them all</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
 
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/processing.png" alt="..." />
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/images/processing.png" alt="..." />
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A game about collecting objects with a green clove.<br>
-                                        <strong>Context: </strong> 
-                                        This game was made with Processing during my internship in Casa do Conhecimento Vila Verde. 
-                                        <br> This game was done by me and Paulo Viana.
-                                    </p>
+                                <!-- Portfolio Modal - Text-->
+                                <!-- Portfolio Modal - Text-->
+                                <p class="mb-4" style="text-align: left; margin-top: 2%;"> <strong>Concept: </strong>A
+                                    game about collecting objects with a green clove.<br>
+                                    <strong>Context: </strong>
+                                    This game was made with Processing during my internship in Casa do Conhecimento Vila
+                                    Verde.
+                                    <br> This game was done by me and Paulo Viana.
+                                </p>
 
-                                    <a href="https://github.com/AndreCerqueira/Catch_Them_All" target="_blank"><button class="btn btn-primary" data-bs-dismiss="modal">
+                                <a href="https://github.com/AndreCerqueira/Catch_Them_All" target="_blank"><button
+                                        class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fab fa-fw fa-github"></i>
                                         View Code
                                     </button></a>
 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Other Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="certificateModal1" tabindex="-1" aria-labelledby="certificateModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="certificateModal1" tabindex="-1" aria-labelledby="certificateModal1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+ Certificate </h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+
+                                    Certificate </h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/erasmus_irland.jpeg" alt="..." />
-
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/images/certificates/erasmus_irland.jpeg"
+                                    alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Other Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="certificateModal2" tabindex="-1" aria-labelledby="certificateModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="certificateModal2" tabindex="-1" aria-labelledby="certificateModal2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+ Host Company Certificate </h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+ Host
+                                    Company Certificate </h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/erasmus_repairIT.jpeg" alt="..." />
-
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5"
+                                    src="assets/images/certificates/erasmus_repairIT.jpeg" alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Other Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="certificateModal3" tabindex="-1" aria-labelledby="certificateModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="certificateModal3" tabindex="-1" aria-labelledby="certificateModal3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+ Seminary Participation </h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Erasmus+ Seminary
+                                    Participation </h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/seminario_erasmus.jpeg" alt="..." />
-
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5"
+                                    src="assets/images/certificates/seminario_erasmus.jpeg" alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Other Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="certificateModal4" tabindex="-1" aria-labelledby="certificateModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="certificateModal4" tabindex="-1" aria-labelledby="certificateModal4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Diploma of Student of Merit 11th Grade</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Diploma of Student
+                                    of Merit 11th Grade</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/diploma_merito_1.jpeg" alt="..." />
-
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5"
+                                    src="assets/images/certificates/diploma_merito_1.jpeg" alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Other Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="certificateModal5" tabindex="-1" aria-labelledby="certificateModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="certificateModal5" tabindex="-1" aria-labelledby="certificateModal5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Diploma of Student of Merit 12th Grade</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Diploma of Student
+                                    of Merit 12th Grade</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/diploma_merito_2.jpeg" alt="..." />
-                                    
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5"
+                                    src="assets/images/certificates/diploma_merito_2.jpeg" alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Other Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="certificateModal6" tabindex="-1" aria-labelledby="certificateModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
+    <!-- Other Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="certificateModal6" tabindex="-1" aria-labelledby="certificateModal6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
 
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Unity 2D Udemy Corse Conclusion Certificate</h2>
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Unity 2D Udemy
+                                    Corse Conclusion Certificate</h2>
 
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/images/certificates/udemyUnity.jpg" alt="..." />
-                                    
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
                                 </div>
+
+                                <!-- Portfolio Modal - Image-->
+                                <img class="img-fluid rounded mb-5" src="assets/images/certificates/udemyUnity.jpg"
+                                    alt="..." />
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
 </html>
