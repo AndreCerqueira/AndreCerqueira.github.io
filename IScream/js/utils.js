@@ -45,6 +45,11 @@ function spawnPlayer() {
     return { x: row, y: col };
 }
 
+function removePlayer() {
+    const character = document.querySelector('.character-container');
+    if (character) character.remove();
+}
+
 function changeCharacterColor(cor) {
     const cores = {
         pink: {

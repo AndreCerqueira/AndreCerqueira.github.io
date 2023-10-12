@@ -41,6 +41,22 @@ footer {
     background-color: #f982bf;
 }
 
+.btn.playing {
+    background-color: #e4e4e4; 
+}
+
+.btn.playing:hover {
+    background-color: #f982bf;
+}
+
+.btn.paused {
+    background-color: #f982bf;
+}
+
+.btn.paused:hover {
+    background-color: #e4e4e4;
+}
+
 .circle {
     position: absolute;
     border-radius: 50%;

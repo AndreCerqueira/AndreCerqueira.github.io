@@ -4,7 +4,9 @@ const modal = document.getElementById("gameOverModal");
 // Função para mostrar o modal
 function showGameOverModal() {
     document.getElementById("modal-score").innerHTML = "Score: " + score;
+    document.getElementById("modal-best-score").innerHTML = "<strong> Best Score: " + bestScore + "</strong>";
     modal.style.display = "block";
+    jogoIniciado = false;
 }
 
 // Função para fechar o modal

@@ -4,6 +4,9 @@ let jogoIniciado = true;
 let playerPosition = { x: 0, y: 0 }; 
 let temporizador;
 
+let bestScore = localStorage.getItem('bestScore');
+if (!bestScore) bestScore = 0;
+document.getElementById("game-best-score").innerHTML = "<strong> Best Score: " + bestScore + "</strong>";
 const placar = document.getElementById('game-score');
 const elementoContagemRegressiva = document.getElementById('contagemRegressiva');
 let characterColor = sessionStorage.getItem('characterColor');
@@ -37,10 +40,16 @@ function iniciarTemporizador() {
     // Função para iniciar o temporizador
     temporizador = setInterval(() => {
         tempoRestante--;
+        if (tempoRestante < 0) tempoRestante = 0;
         elementoContagemRegressiva.innerText = tempoRestante;
 
         if (tempoRestante <= 0) {
             clearInterval(temporizador);
+            
+            if (score >= bestScore) {
+                localStorage.setItem('bestScore', score);
+            }
+
             showGameOverModal(); 
         }
     }, 1000);
@@ -52,30 +61,43 @@ changeCharacterColor(characterColor);
 
 
 document.addEventListener('keyup', (event) => {
-    if (!jogoIniciado || !playerPosition) return;
+    if (!jogoIniciado || !playerPosition || tempoRestante <= 0) return;
 
     const cell = tabuleiro.querySelector(`#cell-${playerPosition.x}-${playerPosition.y}`);
     const character = cell.querySelector('.character-container');
+    let isValidMove = false;
     if (!character) return;
-
 
     switch(event.key) {
         case 'ArrowUp':
-            if (playerPosition.x > 0) playerPosition.x--;
+            if (playerPosition.x > 0) {
+                isValidMove = true;
+                playerPosition.x--;
+            }
             break;
         case 'ArrowDown':
-            if (playerPosition.x < numRows - 1) playerPosition.x++;
+            if (playerPosition.x < numRows - 1) {
+                isValidMove = true;
+                playerPosition.x++;
+            }
             break;
         case 'ArrowLeft':
-            if (playerPosition.y > 0) playerPosition.y--;
+            if (playerPosition.y > 0) {
+                isValidMove = true;
+                playerPosition.y--;
+            }
             break;
         case 'ArrowRight':
-            if (playerPosition.y < numCols - 1) playerPosition.y++;
+            if (playerPosition.y < numCols - 1) {
+                isValidMove = true;
+                playerPosition.y++;
+            }
             break;
         default:
             return; // Se não for uma tecla de seta, saia da função
     }
-    console.log(playerPosition);
+    
+    if (!isValidMove) return;
 
     const newCell = document.getElementById(`cell-${playerPosition.x}-${playerPosition.y}`);
     if (newCell) newCell.appendChild(character); // Mova o contêiner do personagem para a nova célula
@@ -95,7 +117,7 @@ function ajustarTempoEPontuacao(celula) {
         score += 3;
     }
 
-    // Atualiza o display de tempo e pontuação
+    if (tempoRestante < 0) tempoRestante = 0;
     elementoContagemRegressiva.innerText = tempoRestante;
     placar.innerText = 'Score: ' + score;
 }
@@ -103,28 +125,37 @@ function ajustarTempoEPontuacao(celula) {
 
 
 function pauseGame() {
-    const pauseButton = document.querySelector('#pauseButton'); // Adicionado seletor para o botão de pausa
+    const pauseButton = document.querySelector('#pauseButton');
 
     if (jogoIniciado) {
         jogoIniciado = false;
         clearInterval(temporizador);
-        pauseButton.innerText = 'Continue'; // Muda o texto do botão para 'Continue'
+        pauseButton.innerText = 'Continue'; 
+        pauseButton.classList.remove('playing');
+        pauseButton.classList.add('paused');
     } else {
         jogoIniciado = true;
         iniciarTemporizador();
-        pauseButton.innerText = 'Pause'; // Muda o texto do botão para 'Pause'
+        pauseButton.innerText = 'Pause';
+        pauseButton.classList.remove('paused');
+        pauseButton.classList.add('playing');
     }
 }
 
 function restartGame() {
     modal.style.display = "none";
+    jogoIniciado = true;
 
+    document.getElementById("game-best-score").innerHTML = "<strong> Best Score: " + bestScore + "</strong>";
     score = 0;
     tempoRestante = tempoInicial;
     placar.innerText = 'Score: 0';
     
     clearInterval(temporizador); 
     iniciarTemporizador(); 
+    reatribuirCoresTabuleiro();
+    removePlayer();
+    playerPosition = spawnPlayer();
 }
 
 function exitGame() {
