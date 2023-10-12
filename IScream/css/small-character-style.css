@@ -1,0 +1,86 @@
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2%;
+    margin-top: 10%;
+}
+
+.ice-cream {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45px; /* Reduzido */
+    height: 65.6px; /* Reduzido */
+    background: #F982BF;
+    border-top: 1.5px solid #FF98CC; /* Reduzido */
+    border-radius: 22.5px; /* Reduzido */
+    border-bottom-left-radius: 5.6px; /* Reduzido */
+    border-bottom-right-radius: 5.6px; /* Reduzido */
+}
+
+.glare {
+    position: relative;
+    left: 31.9px; /* Ajustado */
+    bottom: 3.8px; /* Ajustado */
+    transform: rotate(-38deg);
+    width: 6.6px; /* Reduzido */
+    height: 13.1px; /* Reduzido */
+    background: #FF98CC;
+    border-radius: 18.8%; /* Ajustado */
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 10.9px; /* Reduzido */
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 27.2px; /* Reduzido */
+}
+
+.eye {
+    position: relative;
+    width: 3.4px; /* Reduzido */
+    height: 3.4px; /* Reduzido */
+    background: #FF2995;
+    border-bottom: 0.4px solid #FF98CC; /* Reduzido */
+    border-radius: 18.8%; /* Ajustado */
+}
+
+.eye::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.9px; /* Reduzido */
+    height: 0.9px; /* Reduzido */
+    background: #fff;
+    border-radius: 18.8%; /* Ajustado */
+}
+
+.mouth {
+    width: 14.1px; /* Reduzido */
+    height: 4.7px; /* Reduzido */
+    background: #FF2995;
+    border-radius: 1.9px; /* Ajustado */
+    border-bottom: 0.4px solid #FF98CC; /* Reduzido */
+    border-bottom-left-radius: 7.5px; /* Ajustado */
+    border-bottom-right-radius: 7.5px; /* Ajustado */
+}
+
+.stick {
+    width: 11.3px; /* Reduzido */
+    height: 13.5px; /* Reduzido */
+    background: #ECAA7D;
+    border-top: 2.3px solid #DB9E74; /* Reduzido */
+    border-bottom-left-radius: 5.6px; /* Reduzido */
+    border-bottom-right-radius: 5.6px; /* Reduzido */
+}
