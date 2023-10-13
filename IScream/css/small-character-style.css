@@ -6,6 +6,10 @@
     margin-top: 10%;
 }
 
+#character-container {
+    z-index: 10 !important; /* Ajuste o valor conforme necessário */
+}
+
 .ice-cream {
     display: flex;
     flex-direction: column;

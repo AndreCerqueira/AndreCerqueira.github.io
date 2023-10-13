@@ -1,0 +1,85 @@
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2%;
+}
+
+.ice-cream {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 120px; /* Reduzido pela metade */
+    height: 175px; /* Reduzido pela metade */
+    background: #F982BF;
+    border-top: 4px solid #FF98CC; /* Ajustado */
+    border-radius: 60px; /* Ajustado */
+    border-bottom-left-radius: 15px; /* Ajustado */
+    border-bottom-right-radius: 15px; /* Ajustado */
+}
+
+.glare {
+    position: relative;
+    left: 85px; /* Ajustado */
+    bottom: 10px; /* Ajustado */
+    transform: rotate(-38deg);
+    width: 17.5px; /* Reduzido pela metade */
+    height: 35px; /* Reduzido pela metade */
+    background: #FF98CC;
+    border-radius: 100%;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 29px; /* Reduzido pela metade */
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 72.5px; /* Reduzido pela metade */
+}
+
+.eye {
+    position: relative;
+    width: 9px; /* Reduzido pela metade */
+    height: 9px; /* Reduzido pela metade */
+    background: #FF2995;
+    border-bottom: 1px solid #FF98CC; /* Ajustado */
+    border-radius: 100%;
+}
+
+.eye::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.5px; /* Reduzido pela metade */
+    height: 2.5px; /* Reduzido pela metade */
+    background: #fff;
+    border-radius: 100%;
+}
+
+.mouth {
+    width: 37.5px; /* Reduzido pela metade */
+    height: 12.5px; /* Reduzido pela metade */
+    background: #FF2995;
+    border-radius: 5px; /* Ajustado */
+    border-bottom: 1px solid #FF98CC; /* Ajustado */
+    border-bottom-left-radius: 20px; /* Ajustado */
+    border-bottom-right-radius: 20px; /* Ajustado */
+}
+
+.stick {
+    width: 30px; /* Reduzido pela metade */
+    height: 36px; /* Reduzido pela metade */
+    background: #ECAA7D;
+    border-top: 6px solid #DB9E74; /* Ajustado */
+    border-bottom-left-radius: 15px; /* Ajustado */
+    border-bottom-right-radius: 15px; /* Ajustado */
+}

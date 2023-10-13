@@ -1,0 +1,35 @@
+@keyframes moveUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100px); } 
+}
+
+@keyframes moveDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(100px); } 
+}
+
+@keyframes moveLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100px); } 
+}
+
+@keyframes moveRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); } 
+}
+
+.move-up {
+    animation: moveUp 0.2s ease-in-out forwards; 
+}
+
+.move-down {
+    animation: moveDown 0.2s ease-in-out forwards; 
+}
+
+.move-left {
+    animation: moveLeft 0.2s ease-in-out forwards; 
+}
+
+.move-right {
+    animation: moveRight 0.2s ease-in-out forwards; 
+}

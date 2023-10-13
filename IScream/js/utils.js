@@ -19,7 +19,7 @@ function spawnPlayer() {
     const cornerCell = cells[randomIndex];
 
     const characterHTML = `
-        <div class="character-container">
+        <div id="character-container" class="character-container">
             <div class="ice-cream">
                 <div class="glare"></div>
                 <div class="face">
@@ -86,27 +86,37 @@ function changeCharacterColor(cor) {
     }
 
     const title = document.querySelector('.title');
-    const iceCream = document.querySelector('.ice-cream');
-    const glare = document.querySelector('.glare');
+    const iceCreams = document.querySelectorAll('.ice-cream');
+    const glares = document.querySelectorAll('.glare');
     const eyes = document.querySelectorAll('.eye');
-    const mouth = document.querySelector('.mouth');
+    const mouths = document.querySelectorAll('.mouth');
 
-    iceCream.style.backgroundColor = corCSS['background'];
-    iceCream.style.borderTopColor = corCSS['lights']; 
-        
-    glare.style.backgroundColor = corCSS['glare'];
+    iceCreams.forEach(iceCream => {
+        iceCream.style.backgroundColor = corCSS['background'];
+        iceCream.style.borderTopColor = corCSS['lights'];
+    });
+
+    glares.forEach(glare => 
+        glare.style.backgroundColor = corCSS['glare']
+    );
 
     eyes.forEach(eye => { 
         eye.style.backgroundColor = corCSS['eye'];
         eye.style.borderBottomColor = corCSS['lights'];
     });
-        
-    mouth.style.backgroundColor = corCSS['mouth'];
-    mouth.style.borderBottomColor = corCSS['lights']; 
+
+    mouths.forEach(mouth => {
+        mouth.style.backgroundColor = corCSS['mouth'];
+        mouth.style.borderBottomColor = corCSS['lights']; 
+    });
 
     if (title) {
         title.style.color = corCSS['lights'];
         title.style.textShadow = `0 0 10px ${corCSS['shadow']}`;
     }
 
+}
+
+function changeCharacterMeltedColor(cor) {
+    document.querySelector('.melted-ice-cream').src = `../img/${cor}-melted.svg`;
 }

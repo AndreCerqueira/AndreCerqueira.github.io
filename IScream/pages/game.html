@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Scream</title>
+    <link rel="icon" type="image/svg+xml" href="../img/gelinho.svg">
     <link rel="stylesheet" href="..\css\game-over-modal.css">
     <link rel="stylesheet" href="..\css\small-character-style.css">
     <link rel="stylesheet" href="..\css\geral-style.css">
     <link rel="stylesheet" href="..\css\game-screen-style.css">
+    <link rel="stylesheet" href="..\css\instructions-screen-style.css">
+    <link rel="stylesheet" href="..\css\character-movement-animation.css">
 </head>
 <body>
     
@@ -57,9 +60,11 @@
     <div id="gameOverModal" class="modal">
         <div class="modal-content">
             <h2>Game Over</h2>
-            <p id="modal-best-score" class="score"><strong>Record: 0</strong></p>
-            <p id="modal-score" class="bestScore">Score: 0</p>
-
+            <img src="../img/pink-melted.svg" alt="Gelado Derretido" class="melted-ice-cream">
+            <div class="scores">
+                <p id="modal-best-score" class="score"><strong>Record: 0</strong></p>
+                <p id="modal-score" class="bestScore">Score: 0</p>
+            </div>
             <div style="margin-top: 25px;">
                 <button class="modal-button btn sm-btn" onclick="restartGame()">Restart</button>
                 <button class="modal-button btn sm-btn" onclick="exitGame()">Exit</button>
@@ -68,13 +73,15 @@
     </div>
 
     <footer>
-        &#9829; Game created by <strong>André Cerqueira</strong> & <strong>Nuno Fernandes</strong> &#9829;
+        &#9829; Game created by <strong>André Cerqueira</strong> & <strong>Nuno Fernandes</strong> & <strong>Marco Cerqueira</strong> &#9829;
     </footer>
     
     <script>
         let score = 0;
     </script>
 
+    <script src="..\js\inventory.js"></script>
+    <script src="..\js\power-ups.js"></script>
     <script src="..\js\gameOver.js"></script>
     <script src="..\js\utils.js"></script>
     <script src="..\js\board.js"></script>

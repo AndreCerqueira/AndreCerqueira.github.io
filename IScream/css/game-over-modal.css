@@ -18,6 +18,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 20%; /* Atualizado de 80% para 40% */
+    border-radius: 24px;
 }
 
 .close {

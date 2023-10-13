@@ -3,41 +3,23 @@ let tempoRestante = tempoInicial;
 let jogoIniciado = true;
 let playerPosition = { x: 0, y: 0 }; 
 let temporizador;
+let isAnimating = false;
 
 let bestScore = localStorage.getItem('bestScore');
 if (!bestScore) bestScore = 0;
 document.getElementById("game-best-score").innerHTML = "<strong> Best Score: " + bestScore + "</strong>";
 const placar = document.getElementById('game-score');
+
 const elementoContagemRegressiva = document.getElementById('contagemRegressiva');
+
 let characterColor = sessionStorage.getItem('characterColor');
 if (!characterColor) characterColor = 'pink';
 
-
 criarTabuleiro();
 atribuirCoresTabuleiro();
-
 iniciarTemporizador();
 
-
-// Criar slots de inventário
-for (let i = 0; i < 3; i++) {
-    const slot = document.createElement('div');
-    slot.className = 'slot';
-    slot.id = 'slot' + (i + 1);
-
-    // Adicionar um item de exemplo ao slot (opcional)
-    const item = document.createElement('img');
-    // item.src = 'caminho/para/o/item' + (i + 1) + '.png'; // Substitua com o caminho real para as imagens dos itens
-    // item.alt = 'Item ' + (i + 1);
-    // item.className = 'item';
-    slot.appendChild(item);
-
-    inventario.appendChild(slot);
-}
-
-
 function iniciarTemporizador() {
-    // Função para iniciar o temporizador
     temporizador = setInterval(() => {
         tempoRestante--;
         if (tempoRestante < 0) tempoRestante = 0;
@@ -47,6 +29,7 @@ function iniciarTemporizador() {
             clearInterval(temporizador);
             
             if (score >= bestScore) {
+                bestScore = score;
                 localStorage.setItem('bestScore', score);
             }
 
@@ -55,57 +38,78 @@ function iniciarTemporizador() {
     }, 1000);
 }
 
-
 playerPosition = spawnPlayer();
 changeCharacterColor(characterColor);
-
+changeCharacterMeltedColor(characterColor);
 
 document.addEventListener('keyup', (event) => {
-    if (!jogoIniciado || !playerPosition || tempoRestante <= 0) return;
+    if (!jogoIniciado || !playerPosition || tempoRestante <= 0 || isAnimating) return;
 
     const cell = tabuleiro.querySelector(`#cell-${playerPosition.x}-${playerPosition.y}`);
     const character = cell.querySelector('.character-container');
     let isValidMove = false;
     if (!character) return;
 
+    let animationClass = '';
+    let newPosition = { ...playerPosition }; 
+
     switch(event.key) {
         case 'ArrowUp':
             if (playerPosition.x > 0) {
+                animationClass = 'move-up';
                 isValidMove = true;
-                playerPosition.x--;
+                newPosition.x--;
             }
             break;
         case 'ArrowDown':
             if (playerPosition.x < numRows - 1) {
+                animationClass = 'move-down';
                 isValidMove = true;
-                playerPosition.x++;
+                newPosition.x++;
             }
             break;
         case 'ArrowLeft':
             if (playerPosition.y > 0) {
+                animationClass = 'move-left';
                 isValidMove = true;
-                playerPosition.y--;
+                newPosition.y--;
             }
             break;
         case 'ArrowRight':
             if (playerPosition.y < numCols - 1) {
+                animationClass = 'move-right';
                 isValidMove = true;
-                playerPosition.y++;
+                newPosition.y++;
             }
             break;
         default:
-            return; // Se não for uma tecla de seta, saia da função
+            return;
     }
     
     if (!isValidMove) return;
+    
+    isAnimating = true;
+    
+    character.classList.add(animationClass);
 
-    const newCell = document.getElementById(`cell-${playerPosition.x}-${playerPosition.y}`);
-    if (newCell) newCell.appendChild(character); // Mova o contêiner do personagem para a nova célula
+    character.addEventListener('animationend', () => {
+        character.classList.remove(animationClass);
+        const newCell = document.getElementById(`cell-${newPosition.x}-${newPosition.y}`);
+        if (newCell) newCell.appendChild(character);
+        playerPosition = newPosition; 
 
-    ajustarTempoEPontuacao(newCell);
-    reatribuirCoresTabuleiro();
+        const powerUp = newCell.querySelector('.power-up');
+        if (powerUp) {
+            catchPowerUp(powerUp, newCell); 
+        }
+
+        incrementMoveCounter();
+        ajustarTempoEPontuacao(newCell);
+        mudarCorDasOutrasCelulas(newCell);
+
+        isAnimating = false;
+    }, {once: true});
 });
-
 
 function ajustarTempoEPontuacao(celula) {
     if (celula.classList.contains('celula-vermelho')) {
@@ -122,20 +126,20 @@ function ajustarTempoEPontuacao(celula) {
     placar.innerText = 'Score: ' + score;
 }
 
-
-
 function pauseGame() {
     const pauseButton = document.querySelector('#pauseButton');
 
     if (jogoIniciado) {
         jogoIniciado = false;
         clearInterval(temporizador);
+        clearInterval(powerUpInterval); 
         pauseButton.innerText = 'Continue'; 
         pauseButton.classList.remove('playing');
         pauseButton.classList.add('paused');
     } else {
         jogoIniciado = true;
         iniciarTemporizador();
+        iniciarPowerUps();
         pauseButton.innerText = 'Pause';
         pauseButton.classList.remove('paused');
         pauseButton.classList.add('playing');
@@ -154,8 +158,11 @@ function restartGame() {
     clearInterval(temporizador); 
     iniciarTemporizador(); 
     reatribuirCoresTabuleiro();
+    removeAllPowerUps();
+    clearAllInventorySlots();
     removePlayer();
     playerPosition = spawnPlayer();
+    changeCharacterColor(characterColor);
 }
 
 function exitGame() {

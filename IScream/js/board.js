@@ -25,7 +25,7 @@ function criarTabuleiro() {
     }
 }
 
-function atribuirCoresTabuleiro() {
+function obterCoresBaseadasNaPontuacao() {
     let cores;
 
     if (score < 30) {
@@ -38,11 +38,49 @@ function atribuirCoresTabuleiro() {
         cores = ['celula-azul', 'celula-laranja', 'celula-laranja', 'celula-laranja', 'celula-vermelho', 'celula-vermelho', 'celula-vermelho', 'celula-vermelho', 'celula-vermelho'];
     }
 
+    return cores;
+}
+
+function atribuirCoresTabuleiro() {
+    const cores = obterCoresBaseadasNaPontuacao();
     const coresEmbaralhadas = embaralhar(cores);
     const celulas = document.querySelectorAll('.celula');
 
     celulas.forEach((celula, index) => {
         celula.classList.add(coresEmbaralhadas[index]);
+    });
+}
+
+function mudarCorDasOutrasCelulas(celulaAtual) {
+    let cores = obterCoresBaseadasNaPontuacao();
+
+    // Remover a cor da célula atual do array de cores
+    const corAtual = celulaAtual.classList.contains('celula-azul') ? 'celula-azul' :
+                     celulaAtual.classList.contains('celula-laranja') ? 'celula-laranja' : 'celula-vermelho';
+    const index = cores.indexOf(corAtual);
+    if (index > -1) {
+        cores.splice(index, 1);
+    }
+
+    const coresEmbaralhadas = embaralhar(cores);
+    const celulas = document.querySelectorAll('.celula');
+
+    let i = 0; // Índice para coresEmbaralhadas
+    celulas.forEach(celula => {
+        if (celula !== celulaAtual) {
+            celula.classList.remove('celula-azul', 'celula-laranja', 'celula-vermelho');
+            celula.classList.add(coresEmbaralhadas[i]);
+            i++;
+        }
+    });
+}
+
+// function tudo azul
+function forcarTudoAzul() {
+    const celulas = document.querySelectorAll('.celula');
+    celulas.forEach(celula => {
+        celula.classList.remove('celula-vermelho', 'celula-laranja');
+        celula.classList.add('celula-azul');
     });
 }
 

@@ -29,9 +29,10 @@
 }
 
 #tabuleiro .celula {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
-    z-index: -2;
 }
 
 #tabuleiro .celula-azul {
@@ -88,6 +89,20 @@
     width: 10%;
 }
 
+.scores {
+    display: flex;
+    justify-content: center; /* alterado para centralizar os itens */
+    margin-bottom: 25px; /* adiciona uma margem inferior para separar dos botões */
+    gap: 30px; /* adiciona um espaço entre os itens de pontuação */
+}
+
+
+.melted-ice-cream {
+    width: 60%; /* ou qualquer tamanho que você deseja */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
 
 /* Estilos adicionados para o inventário */
 .inventory-container {
@@ -99,22 +114,63 @@
 }
 
 #inventario {
+    margin-top: 5px;
     display: flex;
     width: 300px;
 }
+
 
 .slot {
     position: relative;
     display: inline-block;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 2px solid #978e8e;
+    border-radius: 5px;
     margin: 0 5px;
     box-sizing: border-box;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #cac0bca4; 
 }
 
-.item {
+.slot img {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+}
+
+.slot-number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0,0,0,0.5); 
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.power-up {
+    width: 75px;
+    height: 75px;
+    background-size: contain; /* isso garantirá que a imagem seja redimensionada para caber dentro do div */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bloqueado {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-height: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-radius: 5px; 
+}
+
+.bloqueado.inativo {
+    display: none;
 }

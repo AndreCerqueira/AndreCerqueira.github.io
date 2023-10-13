@@ -13,5 +13,10 @@ function openCostumization() {
 }
 
 function openInstructions() {
-    
+    document.location.href = "instructions.html";
+}
+
+
+function openIndex() {
+    document.location.href = "index.html";
 }

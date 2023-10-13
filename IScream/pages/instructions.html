@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Scream</title>
+    <link rel="icon" type="image/svg+xml" href="../img/gelinho.svg">
+    <link rel="stylesheet" href="..\css\geral-style.css">
+    <link rel="stylesheet" href="..\css\medium-character-style.css">
+    <link rel="stylesheet" href="..\css\instructions-screen-style.css">
+    <link rel="stylesheet" href="..\css\main-screen-style.css">
+</head>
+<body>
+    
+    <div class="snow"></div>
+
+    <!-- Background circle effect -->
+    <div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+        <div class="circle circle6"></div>
+    </div>
+
+    <div>
+        <h1 class="title">I Scream</h1>
+
+        <div class="game-container">
+
+            <div class="instructions">
+                <h1>How to play</h1>
+                <p style="text-align: center;">The goal of the game is to accumulate as many points as possible before melting away.</p>
+                <hr><br>
+        
+                <div class="instruction-item player">
+
+                    <div class="character-container">
+                        <div class="ice-cream">
+                        <div class="glare"></div>
+                        <div class="face">
+                        <div class="eyes">
+                        <div class="eye left">
+                        </div>
+                        <div class="eye right">
+                        </div>
+                        </div>
+                        <div class="mouth"></div>
+                        </div>
+                        </div>
+                        <div class="stick"></div>
+                    </div>
+        
+                    <div class="instruction-text">
+                        <h3>The Player</h3>
+                        <p>Use the <strong>arrow keys</strong> to navigate the player around the board.</p>
+                    </div>
+
+                    <div class="character-container">
+                        <div class="ice-cream">
+                        <div class="glare"></div>
+                        <div class="face">
+                        <div class="eyes">
+                        <div class="eye left">
+                        </div>
+                        <div class="eye right">
+                        </div>
+                        </div>
+                        <div class="mouth"></div>
+                        </div>
+                        </div>
+                        <div class="stick"></div>
+                    </div>
+
+                </div>
+        
+                <h2>Game Areas</h2>
+                <hr><br>
+
+                <div class="instruction-item areas">
+                    <div class="color-square blue"></div>
+                    <div class="instruction-text">
+                        <h3>Cold Area</h3>
+                        <p>Enter this area to gain <strong>1 second</strong> and earn <strong>3 points</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="instruction-item areas">
+                    <div class="color-square orange"></div>
+                    <div class="instruction-text">
+                        <h3>Warm Area</h3>
+                        <p>Step into this area to earn <strong>1 point</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="instruction-item areas">
+                    <div class="color-square red"></div>
+                    <div class="instruction-text">
+                        <h3>Hot Area</h3>
+                        <p>Entering this area will cost you <strong>3 seconds</strong>.</p>
+                    </div>
+                </div>
+                
+                <h2>Items</h2>
+                <hr><br>
+        
+                <div class="instruction-item power-ups">
+                    <img src="../img/gelinho.svg" alt="Power-Ups">
+                    <div class="instruction-text">
+                        <h3>Ice cube</h3>
+                        <p>Use this to turn all areas into <strong>cold areas</strong> for the next move.</p>
+                    </div>
+                </div>
+
+                <div class="instruction-item power-ups">
+                    <img src="../img/conezinho.svg" alt="Power-Ups">
+                    <div class="instruction-text">
+                        <h3>Icy friend</h3>
+                        <p>Use this to gain <strong>5 points</strong> instantly. Each additional Icy Friend in your inventory at the time of use grants an <strong>extra 5 points</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="instruction-item power-ups">
+                    <img src="../img/pedrinha.svg" alt="Power-Ups">
+                    <div class="instruction-text">
+                        <h3>Rocky</h3>
+                        <p>This item occupies a slot in your inventory and <strong>cannot be removed</strong> during the current game.</p>
+                    </div>
+                </div>
+
+                <button class="btn sm-btn" style="display: block; margin: auto;" onclick="openIndex()">Return</button>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <footer>
+        &#9829; Game created by <strong>André Cerqueira</strong> & <strong>Nuno Fernandes</strong> & <strong>Marco Cerqueira</strong> &#9829;
+    </footer>
+
+    <script src="..\js\utils.js"></script>
+    <script src="..\js\main-page.js"></script>
+
+</body>
+</html>
