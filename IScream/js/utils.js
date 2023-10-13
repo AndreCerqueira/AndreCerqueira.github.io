@@ -116,7 +116,3 @@ function changeCharacterColor(cor) {
     }
 
 }
-
-function changeCharacterMeltedColor(cor) {
-    document.querySelector('.melted-ice-cream').src = `../img/${cor}-melted.svg`;
-}

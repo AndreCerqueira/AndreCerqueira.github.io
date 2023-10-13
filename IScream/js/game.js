@@ -40,7 +40,7 @@ function iniciarTemporizador() {
 
 playerPosition = spawnPlayer();
 changeCharacterColor(characterColor);
-changeCharacterMeltedColor(characterColor);
+document.querySelector('.melted-ice-cream').src = `../img/${characterColor}-melted.svg`;
 
 document.addEventListener('keyup', (event) => {
     if (!jogoIniciado || !playerPosition || tempoRestante <= 0 || isAnimating) return;
