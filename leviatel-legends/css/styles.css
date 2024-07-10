@@ -1,0 +1,68 @@
+body {
+    padding: 0 2rem;
+    background-color: #55d5cd;
+}
+
+#game-name-img {
+    width: 20%;
+    height: auto;
+}
+  
+.card-img {
+    width: 100%;
+    height: auto;
+}
+
+.card-model-img {
+    width: 60%;
+    height: auto;
+}
+
+.card-item {
+    padding-bottom: 1rem; /* Espaçamento vertical entre as cartas */
+}
+
+.hover-zoom {
+    transition: transform 0.2s; /* Transição suave para o efeito de zoom */
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem ao passar o mouse */
+}
+
+.clickable {
+    cursor: pointer; /* Altera o cursor para indicar que a carta é clicável */
+}
+
+.modal {
+    background: rgba(0,0,0,0.7); 
+    }
+
+#modalCardEffect {
+    margin-bottom: 30px;
+}
+
+#modalCardDetails b {
+    color: rgb(255, 229, 172);
+}
+
+#modalCardDetails li {
+    color: rgb(255, 229, 172);
+    margin-bottom: 15px;
+}
+
+#modalCardDetails li a {
+    color: rgb(255, 255, 255);
+}
+
+#modalButtons {
+    margin-top: 30px;
+}
+
+.map-container {
+    position: relative; /* Garante que o contêiner seja relativo para posicionar a imagem */
+    width: 100%; /* Garante que a largura do contêiner seja igual à largura da grade */
+    max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura máxima do contêiner */
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção da imagem */
+    /* Outros estilos de posicionamento conforme necessário */
+}
