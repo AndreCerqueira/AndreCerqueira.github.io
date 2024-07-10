@@ -75,7 +75,7 @@ function abreModal(numeroCarta, index) {
 
 // Função para ler o arquivo CSV
 function fetchCSV() {
-    fetch('assets/cards.csv')
+    fetch('/leviatel-legends/assets/Cards.csv')
         .then(response => response.text())
         .then(data => processData(data));
 }
