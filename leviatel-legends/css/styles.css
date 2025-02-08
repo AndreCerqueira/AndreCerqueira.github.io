@@ -1,3 +1,4 @@
+/* Estilos gerais */
 body {
     padding: 0 2rem;
     background-color: #55d5cd;
@@ -36,7 +37,7 @@ body {
 
 .modal {
     background: rgba(0,0,0,0.7); 
-    }
+}
 
 #modalCardEffect {
     margin-bottom: 30px;
@@ -64,5 +65,26 @@ body {
     width: 100%; /* Garante que a largura do contêiner seja igual à largura da grade */
     max-width: 100%; /* Para garantir que a imagem não ultrapasse a largura máxima do contêiner */
     height: auto; /* Ajusta a altura automaticamente para manter a proporção da imagem */
-    /* Outros estilos de posicionamento conforme necessário */
+}
+
+/* Estilos da Topbar */
+.topbar {
+    background: #2c3e50; /* Cor de fundo escura */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.topbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold; /* Texto em negrito */
+    transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.topbar a:hover {
+    color: #55d5cd; /* Cor azul clara ao passar o mouse */
 }
