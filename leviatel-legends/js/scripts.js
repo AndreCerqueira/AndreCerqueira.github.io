@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Cria a imagem correspondente à área
                 const areaImg = document.createElement("img");
                 areaImg.src = areasList[areaIndex-1].image;
-                areaImg.classList.add("img-fluid", "hover-zoom", "clickable");
+                areaImg.classList.add('img-fluid', 'mx-auto', 'area-img', 'hover-zoom', 'clickable');
                 areaImg.style.width = "100%";
                 areaImg.style.height = "100%";
                 areaImg.style.objectFit = "cover";
