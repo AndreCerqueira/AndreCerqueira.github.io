@@ -301,6 +301,59 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const mapGrid = document.getElementById("mapGrid");
 
+    const areasList = [
+        { id: 1, image: "assets/Areas/area-1.png", },
+        { id: 2, image: "assets/Areas/area-2.png", },
+        { id: 3, image: "assets/Areas/area-3.png", },
+        { id: 4, image: "assets/Areas/area-4.png", },
+        { id: 5, image: "assets/Areas/area-5.png", },
+        { id: 6, image: "assets/Areas/area-6.png", },
+        { id: 7, image: "assets/Areas/area-7.png", },
+        { id: 8, image: "assets/Areas/area-8.png", },
+        { id: 9, image: "assets/Areas/area-9.png", },
+        { id: 10, image: "assets/Areas/area-10.png", },
+        { id: 11, image: "assets/Areas/area-11.png", },
+        { id: 12, image: "assets/Areas/area-12.png", },
+        { id: 13, image: "assets/Areas/area-13.png", },
+        { id: 14, image: "assets/Areas/area-14.png", },
+        { id: 15, image: "assets/Areas/area-15.png", },
+        { id: 16, image: "assets/Areas/area-16.png", },
+        { id: 17, image: "assets/Areas/area-17.png", },
+        { id: 18, image: "assets/Areas/area-18.png", },
+        { id: 19, image: "assets/Areas/area-19.png", },
+        { id: 20, image: "assets/Areas/area-20.png", },
+        { id: 21, image: "assets/Areas/area-21.png", },
+        { id: 22, image: "assets/Areas/area-22.png", },
+        { id: 23, image: "assets/Areas/area-23.png", },
+        { id: 24, image: "assets/Areas/area-24.png", },
+        { id: 25, image: "assets/Areas/area-25.png", },
+        { id: 26, image: "assets/Areas/area-26.png", },
+        { id: 27, image: "assets/Areas/area-27.png", },
+        { id: 28, image: "assets/Areas/area-28.png", },
+        { id: 29, image: "assets/Areas/area-29.png", },
+        { id: 30, image: "assets/Areas/area-30.png", },
+        { id: 31, image: "assets/Areas/area-31.png", },
+        { id: 32, image: "assets/Areas/area-32.png", },
+        { id: 33, image: "assets/Areas/area-33.png", },
+        { id: 34, image: "assets/Areas/area-34.png", },
+        { id: 35, image: "assets/Areas/area-35.png", },
+        { id: 36, image: "assets/Areas/area-36.png", },
+        { id: 37, image: "assets/Areas/area-37.png", },
+        { id: 38, image: "assets/Areas/area-38.png", },
+        { id: 39, image: "assets/Areas/area-39.png", },
+        { id: 40, image: "assets/Areas/area-40.png", },
+        { id: 41, image: "assets/Areas/area-41.png", },
+        { id: 42, image: "assets/Areas/area-42.png", },
+        { id: 43, image: "assets/Areas/area-43.png", },
+        { id: 44, image: "assets/Areas/area-44.png", },
+        { id: 45, image: "assets/Areas/area-45.png", },
+        { id: 46, image: "assets/Areas/area-46.png", },
+        { id: 47, image: "assets/Areas/area-47.png", },
+        { id: 48, image: "assets/Areas/area-48.png", },
+        { id: 49, image: "assets/Areas/area-49.png", }
+    ];
+    
+
     // Ajustar a grade para ocupar mais espaço e remover espaçamentos laterais
     mapGrid.style.display = "grid";
     mapGrid.style.gridTemplateColumns = "repeat(7, 1fr)";
@@ -322,7 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 // Cria a imagem correspondente à área
                 const areaImg = document.createElement("img");
-                areaImg.src = `assets/areas/area-${areaIndex}.png`;
+                areaImg.src = areasList[areaIndex-1].image;
                 areaImg.classList.add("img-fluid", "hover-zoom", "clickable");
                 areaImg.style.width = "100%";
                 areaImg.style.height = "100%";
