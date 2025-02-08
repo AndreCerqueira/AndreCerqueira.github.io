@@ -398,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function abreModalArea(areaId) {
     const id = areaId.replace("area-", "");  // Remove "area-" do id
-    $('#modalAreaImage').attr('src', `assets/areas/area-${id}.png`);
+    $('#modalAreaImage').attr('src', `assets/Areas/area-${id}.png`);
     const area = areasInfo[id];  // Acessa as informações da área pelo ID
     
     if (area) {
