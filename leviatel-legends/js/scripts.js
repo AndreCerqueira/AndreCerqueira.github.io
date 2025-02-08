@@ -69,6 +69,62 @@ var csvData = `Copies;Nickname;Background;Name;Name style;Effect;Effect style;Ty
 1;;;Drowned;;{keyword:Maritime.};;Layouts/offensive.png;Characters/68-Afogado.png;Numbers/3.png;Numbers/0.png;Numbers/2.png;Numbers/3.png;Rarities/common.png;Tribes/offensive-tribe.png;Undead
 1;;;Leper Zombie;{fontSize:11px};{keyword:Start of your turn:} Take 1 damage.;;Layouts/offensive.png;Characters/69-Leproso.png;Numbers/3.png;Numbers/0.png;Numbers/4.png;Numbers/2.png;Rarities/common.png;Tribes/offensive-tribe.png;Undead
 1;;;Remains;;;;Layouts/neutral.png;Characters/70-Remains.png;Numbers/0.png;Numbers/0.png;Numbers/1.png;Numbers/1.png;;Tribes/neutral-tribe.png;Undead`;
+const areasInfo = {
+    1: { id: 1, nome: "Ocean", descricao: "Upon entering, the character restores its movement, allowing it to move up to two more times this turn. The character can also teleport to another ocean in a valid direction, but only once per turn." },
+    2: { id: 2, nome: "Coast", descricao: "" },
+    3: { id: 3, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    4: { id: 4, nome: "Castle", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    5: { id: 5, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    6: { id: 6, nome: "Coast", descricao: "" },
+    7: { id: 7, nome: "Ocean", descricao: "Upon entering, the character restores its movement, allowing it to move up to two more times this turn. The character can also teleport to another ocean in a valid direction, but only once per turn." },
+    8: { id: 8, nome: "Coast", descricao: "" },
+    9: { id: 9, nome: "Forest", descricao: "" },
+    10: { id: 10, nome: "Forest", descricao: "" },
+    11: { id: 11, nome: "Forest", descricao: "" },
+    12: { id: 12, nome: "Forest", descricao: "" },
+    13: { id: 13, nome: "Forest", descricao: "" },
+    14: { id: 14, nome: "Coast", descricao: "" },
+    15: { id: 15, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    16: { id: 16, nome: "Forest", descricao: "" },
+    17: { id: 17, nome: "Center", descricao: "" },
+    18: { id: 18, nome: "Center", descricao: "" },
+    19: { id: 19, nome: "Center", descricao: "" },
+    20: { id: 20, nome: "Forest", descricao: "" },
+    21: { id: 21, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    22: { id: 22, nome: "Castle", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    23: { id: 23, nome: "Forest", descricao: "" },
+    24: { id: 24, nome: "Center", descricao: "" },
+    25: { id: 25, nome: "Core", descricao: "At the end of the turn, if you have an ally in this area, deal 1 damage to all players." },
+    26: { id: 26, nome: "Center", descricao: "" },
+    27: { id: 27, nome: "Forest", descricao: "" },
+    28: { id: 28, nome: "Castle", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    29: { id: 29, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    30: { id: 30, nome: "Forest", descricao: "" },
+    31: { id: 31, nome: "Center", descricao: "" },
+    32: { id: 32, nome: "Center", descricao: "" },
+    33: { id: 33, nome: "Center", descricao: "" },
+    34: { id: 34, nome: "Forest", descricao: "" },
+    35: { id: 35, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    36: { id: 36, nome: "Coast", descricao: "" },
+    37: { id: 37, nome: "Forest", descricao: "" },
+    38: { id: 38, nome: "Forest", descricao: "" },
+    39: { id: 39, nome: "Forest", descricao: "" },
+    40: { id: 40, nome: "Forest", descricao: "" },
+    41: { id: 41, nome: "Forest", descricao: "" },
+    42: { id: 42, nome: "Coast", descricao: "" },
+    43: { id: 43, nome: "Ocean", descricao: "Upon entering, the character restores its movement, allowing it to move up to two more times this turn. The character can also teleport to another ocean in a valid direction, but only once per turn." },
+    44: { id: 44, nome: "Coast", descricao: "" },
+    45: { id: 45, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    46: { id: 46, nome: "Castle", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    47: { id: 47, nome: "Village", descricao: "You can summon allies from your hand. If an ally is alone in an enemy castle, during your turn, it deals damage to the castle equal to its attack. It can only deal damage once per turn." },
+    48: { id: 48, nome: "Coast", descricao: "" },
+    49: { id: 49, nome: "Ocean", descricao: "Upon entering, the character restores its movement, allowing it to move up to two more times this turn. The character can also teleport to another ocean in a valid direction, but only once per turn." },
+    50: { id: 50, nome: "Fort", descricao: "If is controlled, the player can trade {Text-Icons/energy.png} for {Text-Icons/attack.png}, once per turn." },
+    51: { id: 51, nome: "Gold Mine", descricao: "If is controlled, the player can trade {Text-Icons/energy.png} for {Text-Icons/coin.png}, once per turn." },
+    52: { id: 52, nome: "Catapult", descricao: "A character in the Catapult Area can be launched forward in this column, paying 1 {Text-Icons/energy.png} per area traveled. If an enemy is in the path, the character stops there." },
+    53: { id: 53, nome: "Portal", descricao: "A character in the Portal Area can pay {Text-Icons/energy.png} to move to another Portal or to the Core Area." }
+};
+
 
 var cardList = [];
 
@@ -77,7 +133,7 @@ $(document).ready(function() {
     processData(csvData);
 
     // Número total de cartas
-    const totalCards = cardList.length;
+    const totalCards = cardList.length - 5;
 
     // Container onde as cartas serão adicionadas
     const cardContainer = document.getElementById('cardContainer');
@@ -118,29 +174,22 @@ $(document).ready(function() {
     }
 });
 
-
 // Função para abrir o modal com detalhes da carta
-function abreModal(numeroCarta, index) {
-    // Aqui você pode implementar a lógica para abrir um modal
-    console.log(`Abrir modal da carta ${numeroCarta}`);
-    // Exemplo utilizando Bootstrap modal:
-    $('#myModal').modal('show');
-
-    // Atualiza imagem modalCardImage
-    $('#modalCardImage').attr('src', `assets/Card-Images/${numeroCarta}.png`);
-    
+function abreModal(id, index) {
+    // Lógica para abrir o modal de carta
+    $('#modalCardImage').attr('src', `assets/Card-Images/${id}.png`);
     console.log(cardList[index]);
-    
+
     const tribeKey = Object.keys(cardList[index]).pop();
     console.log(cardList[index][tribeKey]);
-    
-    // get name from cardList
+
     let cardName = cardList[index]["Name"];
-    $('#modalCardName').html('<b>' + cardName+ '</b>');
+    $('#modalCardName').html('<b>' + cardName + '</b>');
     $('#modalCardEffect').html(getEffect(cardList[index]["Effect"]));
     $('#type').html('<b>Type: </b><a>' + getType(cardList[index]["Type"]) + '</a>');
     $('#rarity').html('<b>Rarity: </b><a>' + getRarity(cardList[index]["Rarity"]) + '</a>');
     $('#tribe').html('<b>Tribe: </b><a>' + getTribe(cardList[index][tribeKey]) + '</a>');
+    $('#myModal').modal('show');
 }
 
 
@@ -219,3 +268,148 @@ function getEffect(csvEffect) {
 }
 
 
+// Script para alternar entre as seções de Cards e Map
+document.addEventListener("DOMContentLoaded", function () {
+    const cardsLink = document.getElementById("cardsLink");
+    const mapLink = document.getElementById("mapLink");
+    const cardsSection = document.getElementById("cardsSection");
+    const mapSection = document.getElementById("mapSection");
+
+    // Mostrar a seção de Cards por padrão
+    cardsSection.style.display = "block";
+    mapSection.style.display = "none";
+    cardsLink.classList.add("active");
+
+    // Alternar para a seção de Cards
+    cardsLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        cardsSection.style.display = "block";
+        mapSection.style.display = "none";
+        cardsLink.classList.add("active");
+        mapLink.classList.remove("active");
+    });
+
+    // Alternar para a seção de Map
+    mapLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        cardsSection.style.display = "none";
+        mapSection.style.display = "block";
+        cardsLink.classList.remove("active");
+        mapLink.classList.add("active");
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const mapGrid = document.getElementById("mapGrid");
+
+    // Ajustar a grade para ocupar mais espaço e remover espaçamentos laterais
+    mapGrid.style.display = "grid";
+    mapGrid.style.gridTemplateColumns = "repeat(7, 1fr)";
+    mapGrid.style.gridTemplateRows = "repeat(7, 1fr)";
+    mapGrid.style.width = "100%";
+    mapGrid.style.height = "100%";
+    mapGrid.style.gap = "0";
+
+    // Função para criar a grid 7x7 com imagens
+    function createMapGrid() {
+        let areaIndex = 1; // Começa com area-1
+        for (let row = 0; row < 7; row++) {
+            for (let col = 0; col < 7; col++) {
+                const cell = document.createElement("div");
+                cell.classList.add("map-cell");
+                cell.style.width = "100%";
+                cell.style.height = "100%";
+                cell.id = `area-${areaIndex}`;
+                
+                // Cria a imagem correspondente à área
+                const areaImg = document.createElement("img");
+                areaImg.src = `assets/areas/area-${areaIndex}.png`;
+                areaImg.classList.add("img-fluid", "hover-zoom", "clickable");
+                areaImg.style.width = "100%";
+                areaImg.style.height = "100%";
+                areaImg.style.objectFit = "cover";
+
+                areaImg.addEventListener("click", () => abreModalArea(cell.id));  // Passando o id da célula
+                
+                // Adiciona a imagem à célula
+                cell.appendChild(areaImg);
+                mapGrid.appendChild(cell);
+                
+                areaIndex++; // Incrementa o índice da área
+            }
+        }
+    }
+
+    // Gerar a grade com imagens ao carregar a página
+    createMapGrid();
+});
+
+function abreModalArea(areaId) {
+    const id = areaId.replace("area-", "");  // Remove "area-" do id
+    $('#modalAreaImage').attr('src', `assets/areas/area-${id}.png`);
+    const area = areasInfo[id];  // Acessa as informações da área pelo ID
+    
+    if (area) {
+        $('#modalAreaName').html('<b>' + area.nome + '</b>');
+        
+        // Formatar a descrição para ter quebras de linha e números em negrito
+        let formattedDescription = area.descricao.split('.').map((sentence, index) => {
+            // Adiciona a numeração no início de cada frase
+            if (sentence.trim()) {
+                return `<b>${index + 1}.</b> ${sentence.trim()}.<br>`;
+            }
+            return ''; // Retorna vazio para qualquer linha vazia
+        }).join('');
+
+        // getEffect(area.descricao);
+        if (id >= 50){
+            formattedDescription = getEffect(area.descricao);
+        }
+
+        $('#modalAreaEffect').html(formattedDescription);  // Define a descrição da área no modal
+        $('#areaModal').modal('show');  // Abre o modal
+    } else {
+        console.error("Área não encontrada! " + id);
+    }
+}
+
+$(document).ready(function() {
+    // Lista de áreas especiais (substitua pelos seus dados reais)
+    const areasList = [
+        { id: 50, image: "assets/Areas/area-50.png", },
+        { id: 51, image: "assets/Areas/area-51.png", },
+        { id: 52, image: "assets/Areas/area-52.png", },
+        { id: 53, image: "assets/Areas/area-53.png", }
+    ];
+
+    // Container onde as áreas serão adicionadas
+    const areaContainer = document.getElementById('areaContainer');
+
+    // Loop para adicionar todas as áreas
+    for (let i = 0; i < areasList.length; i++) {
+        // Cria um elemento de imagem para cada área
+        const areaImg = document.createElement('img');
+        areaImg.src = areasList[i].image; // Caminho da imagem da área
+        areaImg.classList.add('img-fluid', 'mx-auto', 'area-img', 'hover-zoom', 'clickable');
+
+        // Cria uma div para cada área e adiciona a imagem dentro dela
+        const areaDiv = document.createElement('div');
+        areaDiv.classList.add('col-3', 'text-center', 'mt-4', 'area-item'); // col-3 para 4 áreas por linha
+        areaDiv.appendChild(areaImg);
+        areaDiv.id = `area-${i+50}`;
+
+        // Adiciona evento de clique para abrir detalhes da área
+        areaImg.addEventListener('click', function() {
+            abreModalArea(areaDiv.id);
+        });
+
+        // Verifica se é o primeiro elemento da linha e cria uma nova linha se necessário
+        if (i % 4 === 0) {
+            const row = document.createElement('div');
+            row.classList.add('row');
+            areaContainer.appendChild(row);
+        }
+
+        // Adiciona a div da área à última linha criada
+        areaContainer.lastElementChild.appendChild(areaDiv);
+    }
+});

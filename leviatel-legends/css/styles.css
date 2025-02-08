@@ -2,6 +2,7 @@
 body {
     padding: 0 2rem;
     background-color: #55d5cd;
+    padding-top: 60px; /* Adiciona espaço para a topbar fixa */
 }
 
 #game-name-img {
@@ -74,6 +75,11 @@ body {
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Ocupa toda a largura da tela */
+    position: fixed; /* Fixa a topbar no topo */
+    top: 0; /* Alinha no topo da página */
+    left: 0; /* Alinha à esquerda */
+    z-index: 1000; /* Garante que a topbar fique acima de outros elementos */
 }
 
 .topbar a {
@@ -87,4 +93,58 @@ body {
 
 .topbar a:hover {
     color: #55d5cd; /* Cor azul clara ao passar o mouse */
+}
+.topbar a.active {
+    color: #55d5cd; /* Cor azul clara para o link ativo */
+    border-bottom: 2px solid #55d5cd; /* Sublinhado para destacar */
+}
+
+/* Estilos da Grid do Mapa */
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 50px); /* 7 colunas de 50px cada */
+    grid-template-rows: repeat(7, 50px); /* 7 linhas de 50px cada */
+    gap: 5px; /* Espaçamento entre as células */
+}
+
+.map-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #2c3e50; /* Cor de fundo das células */
+    border: 1px solid #55d5cd; /* Borda azul clara */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.map-cell:hover {
+    background-color: #55d5cd; /* Cor ao passar o mouse */
+    cursor: pointer;
+}
+#areaModal .modal-content {
+    background-color: #2c3e50;
+    border: 2px solid #55d5cd;
+}
+
+#areaModal .modal-header {
+    border-bottom: 1px solid #55d5cd;
+}
+
+#modalAreaEffect {
+    font-size: 16px;  /* Ajusta o tamanho da fonte */
+    line-height: 1.6;  /* Aumenta o espaçamento entre as linhas */
+    white-space: pre-wrap;  /* Faz com quebras de linha apareçam corretamente */
+}
+
+.area-item {
+    padding-bottom: 1rem; /* Espaçamento vertical entre as áreas */
+}
+
+.area-img {
+    width: 80%;
+    height: auto;
+    cursor: pointer; /* Indica que a área é clicável */
 }
