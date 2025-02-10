@@ -144,7 +144,76 @@ body {
 }
 
 .area-img {
-    width: 80%;
+    width: 100%;
     height: auto;
     cursor: pointer; /* Indica que a área é clicável */
+}
+
+.card {
+    background: linear-gradient(135deg, #2c3e50, #3a6171); /* Tons de azul escuro */
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.card-body {
+    background-color: #3a6171; /* Azul médio */
+    border-radius: 10px;
+}
+
+.list-group-item {
+    background-color: #4a7b8d; /* Azul mais claro */
+    border: none;
+    color: white;
+}
+
+/* Estilo alternado para linhas ímpares e pares */
+.list-group-item:nth-child(odd) {
+    background-color: #6695a7; /* Azul escuro */
+}
+
+.list-group-item:nth-child(even) {
+    background-color: #4a7b8d; /* Azul mais claro */
+}
+
+/* Estiliza a bolinha da raridade */
+.rarity-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Cores para diferentes raridades */
+
+.rarity-common {
+    background-color: #00eb31; /* Comum */
+}
+
+.rarity-rare {
+    background-color: #0eceeb; /* Raro */
+}
+
+.rarity-epic {
+    background-color: #d800ff; /* Épico */
+}
+
+.rarity-legendary {
+    background-color: #e1002d; /* Lendário */
+}
+
+/* Miniatura da carta */
+.card-thumbnail {
+    width: 5%; /* Define um tamanho pequeno */
+    height: 5%;
+    margin-right: 10px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.deck-difficulty {
+    font-size: 18px;
+    color: #f1c40f; /* Amarelo dourado */
+    margin-bottom: 10px;
 }
