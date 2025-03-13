@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | TAP_Project</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas"></canvas>
+    <script src="Build/8433c9237cca186961eda53ea5154044.loader.js"></script>
+    <script>
+      function resizeCanvas() {
+        var canvas = document.getElementById("unity-canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas(); // Garante que o canvas esteja dimensionado corretamente ao carregar
+
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        arguments: [],
+        dataUrl: "Build/0c9871fea1347841471eac4848bc4427.data",
+        frameworkUrl: "Build/54c1a358cb26fce1523b46589975693e.framework.js",
+        codeUrl: "Build/e28de181c2d1efe74c83c3b04604a2ac.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "TAP_Project",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
