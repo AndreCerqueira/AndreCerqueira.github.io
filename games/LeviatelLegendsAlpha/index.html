@@ -3,45 +3,102 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | TAP_Project</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-      }
-      canvas {
-        display: block;
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
+    <title>Unity Web Player | Leviatel Legends</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-    <canvas id="unity-canvas"></canvas>
-    <script src="Build/8433c9237cca186961eda53ea5154044.loader.js"></script>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+    </div>
     <script>
-      function resizeCanvas() {
-        var canvas = document.getElementById("unity-canvas");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+      window.addEventListener("load", function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("ServiceWorker.js");
+        }
+      });
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
       }
 
-      window.addEventListener("resize", resizeCanvas);
-      resizeCanvas(); // Garante que o canvas esteja dimensionado corretamente ao carregar
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/e141d6751d5fbfe7703ed062aba72986.loader.js";
+      var config = {
         arguments: [],
-        dataUrl: "Build/0c9871fea1347841471eac4848bc4427.data",
-        frameworkUrl: "Build/54c1a358cb26fce1523b46589975693e.framework.js",
-        codeUrl: "Build/e28de181c2d1efe74c83c3b04604a2ac.wasm",
+        dataUrl: buildUrl + "/9f63d76ec948247a7a19f887f34debf1.data",
+        frameworkUrl: buildUrl + "/f666fbb7d80f773c292e6f3ec229baba.framework.js",
+        codeUrl: buildUrl + "/d247ba4326ac262c4fc4854c675eb1c4.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "TAP_Project",
-        productVersion: "0.1",
-      });
+        companyName: "NestGames",
+        productName: "Leviatel Legends",
+        productVersion: "1.0.0",
+        showBanner: unityShowBanner,
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
     </script>
   </body>
 </html>
