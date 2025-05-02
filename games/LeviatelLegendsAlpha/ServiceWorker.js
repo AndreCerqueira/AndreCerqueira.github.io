@@ -1,9 +1,9 @@
 const cacheName = "NestGames-Leviatel Legends-1.0.0";
 const contentToCache = [
-    "Build/d54c1c96404b481f7d98ac77c9d2bf99.loader.js",
+    "Build/20ae02b7e3e15ed7a392a43ed663a07f.loader.js",
     "Build/5e3737f539080891623c4dc3cb9acaef.framework.js",
-    "Build/29b1a9b7929aec81e7d5d5ef33ceb373.data",
-    "Build/66eaf198e1a1c2023b81c90d94efd872.wasm",
+    "Build/08c7e646312e6415a980856533e4f018.data",
+    "Build/d91600f042f589f9aa7843b61c3d538d.wasm",
     "TemplateData/style.css"
 
 ];
