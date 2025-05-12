@@ -9,17 +9,16 @@
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-    <div id="unity-container" style="width: 100vw; height: 100vh; overflow: hidden; margin: 0; padding: 0;">
-      <canvas id="unity-canvas" tabindex="-1" style="width: 100%; height: 100%; display: block;"></canvas>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"></div>
+      <div id="unity-warning"> </div>
     </div>
-
     <script>
       window.addEventListener("load", function () {
         if ("serviceWorker" in navigator) {
@@ -33,6 +32,12 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
 
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
@@ -43,7 +48,7 @@
         if (type == 'error') div.style = 'background: red; padding: 10px;';
         else {
           if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function () {
+          setTimeout(function() {
             warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
@@ -51,26 +56,36 @@
         updateBannerVisibility();
       }
 
-      // FIX: Adicionar timestamp para evitar cache e garantir que os ficheiros da build sempre carregam a versão mais recente
-      const timestamp = new Date().getTime(); // Adicionando timestamp para o cache busting
-
+      const timestamp = new Date().getTime();
       var buildUrl = "Build";
-      
-      // FIX: Adicionar v=timestamp aos URLs para evitar cache antigo
-      var loaderUrl = buildUrl + "/2e5176df4d4190a073212479c79dbdb4.loader.js?v=" + timestamp; // Alterado para forçar a atualização do loader.js
+      var loaderUrl = buildUrl + "/2e5176df4d4190a073212479c79dbdb4.loader.js?v=" + timestamp;
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/6f5ab238e8a151347f5da15c2482d875.data?v=" + timestamp, // Alterado para forçar a atualização do .data
-        frameworkUrl: buildUrl + "/5e3737f539080891623c4dc3cb9acaef.framework.js?v=" + timestamp, // Alterado para forçar a atualização do .framework.js
-        codeUrl: buildUrl + "/52218d20f0e99471b122a17a4f8b4086.wasm?v=" + timestamp, // Alterado para forçar a atualização do .wasm
-        streamingAssetsUrl: "StreamingAssets?v=" + timestamp, // Alterado para forçar a atualização do StreamingAssets
+        dataUrl: buildUrl + "/6f5ab238e8a151347f5da15c2482d875.data?v=" + timestamp,
+        frameworkUrl: buildUrl + "/5e3737f539080891623c4dc3cb9acaef.framework.js?v=" + timestamp,
+        codeUrl: buildUrl + "/52218d20f0e99471b122a17a4f8b4086.wasm?v=" + timestamp,
+        streamingAssetsUrl: "StreamingAssets?v=" + timestamp,
         companyName: "NestGames",
         productName: "Leviatel Legends",
         productVersion: "1.0.0",
         showBanner: unityShowBanner,
-        matchWebGLToCanvasSize: false, // FIX: Mantém a resolução da canvas e evita a criação do FBO de tamanho variável
-        devicePixelRatio: window.devicePixelRatio // FIX: Define a razão do pixel da tela (retina, etc.)
+        matchWebGLToCanvasSize: false
       };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
 
       loadingBar.style.display = "block";
 
@@ -86,19 +101,6 @@
         });
       };
       document.body.appendChild(script);
-
-      // FIX: Ajusta o tamanho do canvas com base na janela e na densidade de pixels
-      window.addEventListener("resize", function () {
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-
-        canvas.width = width * window.devicePixelRatio;
-        canvas.height = height * window.devicePixelRatio;
-
-        // Defina o estilo de largura e altura da canvas para 100% da janela
-        canvas.style.width = width + "px";
-        canvas.style.height = height + "px";
-      });
     </script>
   </body>
 </html>
