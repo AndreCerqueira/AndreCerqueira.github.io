@@ -68,7 +68,8 @@
         productName: "Leviatel Legends",
         productVersion: "1.0.0",
         showBanner: unityShowBanner,
-        matchWebGLToCanvasSize: false // FIX: Mantém a resolução da canvas e evita a criação do FBO de tamanho variável
+        matchWebGLToCanvasSize: false, // FIX: Mantém a resolução da canvas e evita a criação do FBO de tamanho variável
+        devicePixelRatio: window.devicePixelRatio // FIX: Define a razão do pixel da tela (retina, etc.)
       };
 
       loadingBar.style.display = "block";
@@ -85,6 +86,19 @@
         });
       };
       document.body.appendChild(script);
+
+      // FIX: Ajusta o tamanho do canvas com base na janela e na densidade de pixels
+      window.addEventListener("resize", function () {
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        canvas.width = width * window.devicePixelRatio;
+        canvas.height = height * window.devicePixelRatio;
+
+        // Defina o estilo de largura e altura da canvas para 100% da janela
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+      });
     </script>
   </body>
 </html>
