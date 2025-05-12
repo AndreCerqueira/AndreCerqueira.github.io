@@ -56,20 +56,18 @@
         updateBannerVisibility();
       }
 
-      const timestamp = new Date().getTime();
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/2e5176df4d4190a073212479c79dbdb4.loader.js?v=" + timestamp;
+      var loaderUrl = buildUrl + "/2e5176df4d4190a073212479c79dbdb4.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/6f5ab238e8a151347f5da15c2482d875.data?v=" + timestamp,
-        frameworkUrl: buildUrl + "/5e3737f539080891623c4dc3cb9acaef.framework.js?v=" + timestamp,
-        codeUrl: buildUrl + "/52218d20f0e99471b122a17a4f8b4086.wasm?v=" + timestamp,
-        streamingAssetsUrl: "StreamingAssets?v=" + timestamp,
+        dataUrl: buildUrl + "/ff2d829da7d050a5c6a4d2c680a0e085.data",
+        frameworkUrl: buildUrl + "/5e3737f539080891623c4dc3cb9acaef.framework.js",
+        codeUrl: buildUrl + "/52218d20f0e99471b122a17a4f8b4086.wasm",
+        streamingAssetsUrl: "StreamingAssets",
         companyName: "NestGames",
         productName: "Leviatel Legends",
         productVersion: "1.0.0",
         showBanner: unityShowBanner,
-        matchWebGLToCanvasSize: false
       };
 
       // By default Unity keeps WebGL canvas render target size matched with
