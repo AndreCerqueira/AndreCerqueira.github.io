@@ -16,13 +16,6 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <!--
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Leviatel Legends</div>
-      </div>-->
     </div>
     <script>
       var canvas = document.querySelector("#unity-canvas");
@@ -53,12 +46,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/2e5176df4d4190a073212479c79dbdb4.loader.js";
+      var loaderUrl = buildUrl + "/fc442496a3bccf2e7f5a7307dc84883f.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/df7ce347d5cccb6c25d5bc3ab40e078f.data",
+        dataUrl: buildUrl + "/4afb81c4c8e9ad9594aa83d34d63f10c.data",
         frameworkUrl: buildUrl + "/5e3737f539080891623c4dc3cb9acaef.framework.js",
-        codeUrl: buildUrl + "/52218d20f0e99471b122a17a4f8b4086.wasm",
+        codeUrl: buildUrl + "/0341746968759d42d35420a62e4bf0a2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "NestGames",
         productName: "Leviatel Legends",
@@ -112,9 +105,6 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-                document.querySelector("#unity-fullscreen-button").onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
 
               }).catch((message) => {
                 alert(message);
