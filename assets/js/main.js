@@ -281,6 +281,13 @@ function initializeProjectModal() {
             demo: 'https://andrecerqueira.github.io/Cubinho-Game/',
             code: 'https://github.com/AndreCerqueira/Cubinho'
         },
+        'Dish Dash': {
+            video: 'https://www.youtube.com/embed/uY1glKrcVto',
+            description: 'Control of a busy kitchen, where a conveyor belt carries dishes that require specific ingredients.',
+            tech: ['Unity', 'C#', 'Mobile', 'Desktop', 'WebGL'],
+            demo: 'https://andrecerqueira.itch.io/dish-dash',
+            code: '#'
+        },
         'Casual Sweeper': {
             video: 'https://www.youtube.com/embed/cuEbQhUodq4',
             description: 'A modern mobile version of the classic Minesweeper, with intuitive controls and clean aesthetics.',
