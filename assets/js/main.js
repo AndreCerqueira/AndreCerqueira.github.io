@@ -281,6 +281,13 @@ function initializeProjectModal() {
             demo: 'https://andrecerqueira.github.io/Cubinho-Game/',
             code: 'https://github.com/AndreCerqueira/Cubinho'
         },
+        'Survive Halloween Night': {
+            video: 'https://www.youtube.com/embed/TSviq-0jSyU?si=8OrnkUej3BlP0e-c',
+            description: 'Monsters got out of their graves and they are after you. You have to run, find the exit and survive the night, don\'t let them take away your light.',
+            tech: ['Unity', 'C#', 'Mobile', 'Desktop', 'WebGL'],
+            demo: 'https://andrecerqueira.itch.io/survive-halloween-night',
+            code: 'https://github.com/AndreCerqueira/GGJ-2026'
+        },
         'Dish Dash': {
             video: 'https://www.youtube.com/embed/uY1glKrcVto',
             description: 'Control of a busy kitchen, where a conveyor belt carries dishes that require specific ingredients.',
