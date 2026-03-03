@@ -281,10 +281,17 @@ function initializeProjectModal() {
             demo: 'https://andrecerqueira.github.io/Cubinho-Game/',
             code: 'https://github.com/AndreCerqueira/Cubinho'
         },
+        'Sheep Ahoy!': {
+            video: 'https://www.youtube.com/embed/eJQBnqg8MAA?si=XWUW0nSSaMZsORFP',
+            description: 'The Ahoy festival has ended, and the flock needs to return to their pen! Play as a sheepdog and safely guide your sheep through a bright, colorful world.',
+            tech: ['Unity', 'C#', 'Desktop'],
+            demo: 'https://andrecerqueira.itch.io/sheep-ahoy',
+            code: 'https://github.com/AndreCerqueira/MAD-2026'
+        },
         'Survive Halloween Night': {
             video: 'https://www.youtube.com/embed/TSviq-0jSyU?si=8OrnkUej3BlP0e-c',
             description: 'Monsters got out of their graves and they are after you. You have to run, find the exit and survive the night, don\'t let them take away your light.',
-            tech: ['Unity', 'C#', 'Mobile', 'Desktop', 'WebGL'],
+            tech: ['Unity', 'C#', 'Desktop'],
             demo: 'https://andrecerqueira.itch.io/survive-halloween-night',
             code: 'https://github.com/AndreCerqueira/GGJ-2026'
         },
