@@ -274,6 +274,13 @@ function initializeProjectModal() {
             demo: 'https://andrecerqueira.github.io/games/LeviatelLegendsAlpha/',
             code: '#'
         },
+        'Keyboard Commander': {
+            video: 'https://www.youtube.com/embed/TgVMo6viQMA?si=OqOzcRNbjmol_y9x',
+            description: 'Sheet music simplified, piano gamified. Keyboard Commander translates traditional sheet music into an interactive rhythm game. It features dynamic falling notes and multiple difficulty levels.',
+            tech: ['Unity', 'C#', 'XR / VR', 'Rhythm Game'],
+            demo: 'https://andrecerqueira.itch.io/keyboard-commander',
+            code: 'https://github.com/AndreCerqueira/Keyboard-Commander'
+        },
         'Cubinho': {
             video: 'https://www.youtube.com/embed/NTHVDC3fX38',
             description: 'In this icy world, players control an ice cube, travel the greatest distance, compete on the global leaderboard, and collect coins to unlock customizable items.',
